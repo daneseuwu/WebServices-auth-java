@@ -1,5 +1,5 @@
 # WebServices-auth
-Requisitos para web services
+Required
 
 ```bash
 GlassFish 4.1.2
@@ -31,11 +31,11 @@ password varbinary(500),
 id_rol int,
 date_created datetime
 )
+
+select * from user_webservice
 ```
 
 ```sql
-select * from user_webservice
-
 create table rol(
 id_rol int identity(1,1) primary key,
 rol varchar(20)
