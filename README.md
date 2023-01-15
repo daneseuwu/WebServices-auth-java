@@ -51,3 +51,6 @@ update user_webservice set password=ENCRYPTBYPASSPHRASE('Pr0gr4mm1ng','123')
 
 decrypt passwords with pattern
 
+```sql
+select username, DECRYPTBYPASSPHRASE('Pr0gr4mm1ng', password) password from user_webservice
+```
