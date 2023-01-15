@@ -1,5 +1,5 @@
 # WebServices-auth
-Required
+REQUIRED
 
 ```bash
 GlassFish 4.1.2
@@ -9,11 +9,11 @@ Netbeant 8.2 o Apache netbean 15
 script de sql server version 2019
 ```
 
-CREATE DATABASE
+CREATE DATABASE ON SQL SERVER
 ```sql
 create database webservicedba
 ```
-
+USE DATABASE ON SQL SERVER
 ```sql
 use webservicedba
 ```
