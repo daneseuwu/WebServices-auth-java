@@ -5,8 +5,8 @@ REQUIRED
 GlassFish 4.1.2
 sqljdbc 6
 jdk 1.8
-Netbeant 8.2 o Apache netbean 15
-script de sql server version 2019
+Netbeant 8.2 or Apache netbean 15
+server version 2019 or lastest
 ```
 
 CREATE DATABASE ON SQL SERVER
