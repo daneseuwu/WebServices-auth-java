@@ -1,4 +1,14 @@
 # WebServices-auth
+
+```sql
+create database webservicedba
+```
+```sql
+use webservicedba
+```
+
+
+
 Requisitos para web services
 
 ```bash
