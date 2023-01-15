@@ -20,7 +20,7 @@ public class authControllers implements authInterface {
     Connection cn;
     CallableStatement auth;
     ResultSet rs;
-    String secret = "sistemas";
+    String pattern = "Pr0gr4mm1ng";
 
     @Override
     public auth authUser(String username, String password) {
@@ -28,10 +28,10 @@ public class authControllers implements authInterface {
 
         try {
             cn = connectionsql.getInstancia().getConexion();
-            auth = cn.prepareCall("{call authUser(?,?,?)}");
+            auth = cn.prepareCall("{call sp_auth(?,?,?)}");
             auth.setString(1, username);
             auth.setString(2, password);
-            auth.setString(3, secret);
+            auth.setString(3, pattern);
             rs = auth.executeQuery();
 
             if (rs.next()) {
@@ -40,11 +40,11 @@ public class authControllers implements authInterface {
                     user.setUsername(rs.getString("username"));
                     user.setPassword(rs.getString("password"));
 
-                    if (rs.getBoolean("Estado")) {
-                        user.setStatus(1);
-                    } else {
-                        user.setStatus(0);
-                    }
+//                    if (rs.getBoolean("Estado")) {
+//                        user.setStatus(1);
+//                    } else {
+//                        user.setStatus(0);
+//                    }
 
                 } else {
                     user.setId_user(-1);
