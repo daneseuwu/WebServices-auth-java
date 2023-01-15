@@ -1,14 +1,4 @@
 # WebServices-auth
-
-```sql
-create database webservicedba
-```
-```sql
-use webservicedba
-```
-
-
-
 Requisitos para web services
 
 ```bash
@@ -19,19 +9,37 @@ Netbeant 8.2 o Apache netbean 15
 script de sql server version 2019
 ```
 
-Cadena de conexion sql server jdbc en el WebService : 
-
-```java
-jdbc:sqlserver://hostname\\instancia:port;databaseName=nombredb
+CREATE DATABASE
+```sql
+create database webservicedba
 ```
-Donde :
 
-hostname  = Nombre del server sql(Nombre de equipo)
-instancia = Nombre de la instancia del servidor sql server
-port      = Numero de puerto del servidor sql server (Port Default 1433)
-nombredb  = Nombre de la base de datos en el sql server
+```sql
+use webservicedba
+```
 
-Usuario y contrasena para ejecutar en la base de datos solo procedimientos alamancenado
+CREATE TABLES 
 
-username = DBA
-Password 123
+```sql
+create table user_webservice(
+id_user int identity(1,1) primary key,
+firtname varchar (50),
+lastname varchar (50),
+code varchar(50),
+username varchar(50),
+password varbinary(500),
+id_rol int,
+date_created datetime
+)
+```
+
+```sql
+select * from user_webservice
+
+create table rol(
+id_rol int identity(1,1) primary key,
+rol varchar(20)
+)
+
+select * from rol
+```
