@@ -43,3 +43,4 @@ rol varchar(20)
 
 select * from rol
 ```
+Encrypt passwords for users registers
