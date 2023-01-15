@@ -9,8 +9,11 @@ Netbeant 8.2 o Apache netbean 15
 script de sql server version 2019
 ```
 
-Cadena de conexion sql server jdbc en el WebService : jdbc:sqlserver://hostname\\instancia:port;databaseName=nombredb
+Cadena de conexion sql server jdbc en el WebService : 
 
+```java
+jdbc:sqlserver://hostname\\instancia:port;databaseName=nombredb
+```
 Donde :
 
 hostname  = Nombre del server sql(Nombre de equipo)
