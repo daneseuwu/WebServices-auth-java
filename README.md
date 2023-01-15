@@ -1,5 +1,5 @@
 # WebServices-auth
-REQUIRED
+Required
 
 ```bash
 GlassFish 4.1.2
@@ -9,16 +9,16 @@ Netbeant 8.2 or Apache netbean 15
 server version 2019 or lastest
 ```
 
-CREATE DATABASE ON SQL SERVER
+Create database on sql server
 ```sql
 create database webservicedba
 ```
-USE DATABASE ON SQL SERVER
+use database on sql server
 ```sql
 use webservicedba
 ```
 
-CREATE TABLES 
+Create tables  
 
 ```sql
 create table user_webservice(
@@ -43,4 +43,7 @@ rol varchar(20)
 
 select * from rol
 ```
-Encrypt passwords for users registers
+Encrypt passwords for users registers sentence ```UPDATE```
+
+
+update user_webservice set password=ENCRYPTBYPASSPHRASE('Pr0gr4mm1ng',123)
