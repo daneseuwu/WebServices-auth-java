@@ -3,15 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package interfaces;
+
 import models.auth;
 
 /**
  *
  * @author duga17
  */
-public interface userInterface {
+public interface authInterface {
 
-    public auth auth(
-            String Login,
-            String Password);
+    public auth authUser(
+            String username,
+            String password);
 }
