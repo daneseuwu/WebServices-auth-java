@@ -43,8 +43,11 @@ rol varchar(20)
 
 select * from rol
 ```
-Encrypt passwords for users registers sentence ```sql UPDATE```
+Encrypt passwords for users' registers using sentence ```SQL UPDATE``` where 123 is the password for the default for all
 
 ```sql
-update user_webservice set password=ENCRYPTBYPASSPHRASE('Pr0gr4mm1ng',123)
+update user_webservice set password=ENCRYPTBYPASSPHRASE('Pr0gr4mm1ng','123')
 ```
+
+decrypt passwords with pattern
+
