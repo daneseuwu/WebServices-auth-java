@@ -20,11 +20,10 @@ public class WebServiceSOAP {
     /**
      * This is a sample web service operation
      */
-    
     authControllers dauth = new authControllers();
-    
-        @WebMethod(operationName = "ValidarUsuario")
-    public auth auth(
+
+    @WebMethod(operationName = "authUser")
+    public auth authUser(
             @WebParam(name = "username") String username,
             @WebParam(name = "password") String password
     ) {

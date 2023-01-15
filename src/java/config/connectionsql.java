@@ -17,7 +17,7 @@ public class connectionsql {
     Connection cn = null;
     //String inst = "";
     static connectionsql instancia = null;
-    String strConexionSql = "jdbc:sqlserver://localhost\\nameinstancesql:1433;databaseName=webservicedba";
+    String strConexionSql = "jdbc:sqlserver://localhost\\SRV01:1433;databaseName=webservicedba";
     String strDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 
     //contructor class connection
