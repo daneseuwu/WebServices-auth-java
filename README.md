@@ -43,7 +43,8 @@ rol varchar(20)
 
 select * from rol
 ```
-Encrypt passwords for users registers sentence ```UPDATE```
+Encrypt passwords for users registers sentence ```sql UPDATE```
 
-
+```sql
 update user_webservice set password=ENCRYPTBYPASSPHRASE('Pr0gr4mm1ng',123)
+```
