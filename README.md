@@ -1,13 +1,13 @@
 # WebServices-auth
 Requisitos para web services
 
-*GlassFish 4.1.2
-*sqljdbc 6
-*jdk 1.8
-*Netbeant 8.2 o Apache netbean 15
-
-****
+``bash
+GlassFish 4.1.2
+sqljdbc 6
+jdk 1.8
+Netbeant 8.2 o Apache netbean 15
 script de sql server version 2019
+```
 
 
 
