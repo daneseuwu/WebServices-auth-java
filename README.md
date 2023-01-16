@@ -2,8 +2,8 @@
 Required
 
 ```bash
-GlassFish 4.1.2
-sqljdbc 6
+GlassFish 4.1.2 server http
+sqljdbc 6  is required in the web service library as well as in the connection to the service database
 jdk 1.8
 Netbeant 8.2 or Apache netbean 15
 server version 2019 or lastest
@@ -72,7 +72,48 @@ end
 ```
 Connection String 
 ```sql
-jdbc:sqlserver://localhost\\"instance":1433;databaseName=?
+public class connectionsql {
+    
+    //configure driver connection sql driver
+    Connection cn = null;
+    //String inst = "";
+    static connectionsql instancia = null;
+    String strConexionSql = "jdbc:sqlserver://localhost\\SRV01:1433;databaseName=webservicedba";
+    String strDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+
+    //contructor class connection
+    public connectionsql() {
+        
+        //declare var user and pass to execute storage procdure on database
+        String dbuser = "webservicedba";
+        String dbpassword = "123";
+
+        try {
+
+            Class.forName(strDriver);
+            cn = DriverManager.getConnection(strConexionSql,dbuser,dbpassword);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+    }
+
+    public static connectionsql getInstancia() throws Exception {
+
+        if (instancia == null) {
+            instancia = new connectionsql();
+        }
+        return instancia;
+
+    }
+
+    public Connection getConexion() {
+        return cn;
+    }
+    
+}
+
 ````
 import
 ```java
